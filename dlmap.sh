@@ -9,6 +9,10 @@
 	\n"
 	exit -1
  fi
+
+command -v wget >/dev/null 2>&1 || { echo >&2 "[!] wget is required but it's not installed. Aborting."; }
+command -v composite >/dev/null 2>&1 || { echo >&2 "[!] ImageMagick is required but it's not installed. Aborting."; }
+command -v montage >/dev/null 2>&1 || { echo >&2 "[!] ImageMagick is required but it's not installed. Aborting."; }
  
  # "schematicOverview"
  table=("background" "enzymes" "substrates" "coenzymes" "unicellularOrganisms" "higherPlants" "regulatoryEffects")
