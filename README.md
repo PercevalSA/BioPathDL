@@ -31,6 +31,7 @@ you can add those following options just after "-monitor" lines 80 and 95
 the amount of ram you want to allow to the process
 ```bash
 -limit memory 4GiB
+```
 the amount mapped memmory you want to allow to the process
 ```bash
 -limit map 10GiB 
