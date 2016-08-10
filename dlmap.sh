@@ -78,7 +78,6 @@ for i in ${!table[@]}; do
 	cd ${table[i]}
 
 	montage -monitor *.png -geometry 1024x1024+0+0 -tile $($cols)x$($rows) -background none PNG32:${table[i]}.png
-	# -limit memory 12GiB -limit map 10GiB -define registry:temporary-path=/tmp/
 	
 	echo '[*] Compiling '${table[i]}' done'
 	mv ${table[i]}.png "../compil/"
@@ -94,7 +93,6 @@ for i in ${!table[@]}; do
 		cp ${table[i]}.png tmp$i.png
 	else
 		composite -monitor -background none tmp`expr $i - 1`.png ${table[i]}.png PNG32:tmp$i.png
-		# -limit memory 12GiB -limit map 10GiB -define registry:temporary-path=/tmp/
 	fi
 done
 
